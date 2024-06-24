@@ -11,7 +11,7 @@
                     <div>
                         <a href="{{ route('login') }}" class="btn btn-danger">Log Out</a>
                     </div>
-                    @if(session('success'))
+                    @if (session('success'))
                         <div class="alert alert-success mb-0">
                             {{ session('success') }}
                         </div>
@@ -31,7 +31,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($users as $user)
+                            @foreach ($users as $user)
                                 <tr>
                                     <td>
                                         @if ($user->image)
@@ -44,7 +44,8 @@
                                     <td>{{ $user->dob }}</td>
                                     <td>
                                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-sm">View</a>
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="{{ route('users.edit', $user->id) }}"
+                                            class="btn btn-warning btn-sm">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
